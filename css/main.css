@@ -1,0 +1,493 @@
+/*  
+Theme Name: Texus Law
+Version:    1.0
+Author:     ThemeWagon
+
+
+TABLE OF CONTENTS
+    01 - General and Typography
+    02 - Header
+    03 - Navigation
+    04 - Services
+    05 - Footer
+    06 - Responsive styles
+*/
+
+
+/* ==========================================================================
+    01. General and Typography 
+========================================================================== */
+body {
+    font-family:'Kreon',serif;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+}
+img {
+    max-height:100%;
+    max-width:100%;
+}
+section {
+    position:relative;
+    padding:0;
+    background:#F0A830;
+    color:#FFF;
+    text-align:center;
+}
+section::before,section::after {
+    position:absolute;
+    content: '';
+}
+h1,h3,h3,h4,h5,h6{
+  font-family: 'Lora', serif;  
+}
+p,a{
+    font-family: 'Roboto Slab', serif;
+}
+
+/* ==========================================================================
+    02. Header 
+========================================================================== */
+#header {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+    background-image:url(../img/night.jpg);
+    -webkit-background-size:/*@@prefixmycss->No equivalent*/;
+    -moz-background-size:cover;
+    -o-background-size:/*@@prefixmycss->No equivalent*/;
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    position:relative;
+}
+h1.title-page:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: #31aae2;
+    left: 50%;
+    margin-left: -50px;
+    bottom: -120px;
+}
+
+button.contact {
+    background-color: white;
+    color: #3f5074;
+    padding: 12px 36px;
+    border: navajowhite;
+    position: relative;
+    top: -45px;
+}
+.bg-overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(44,33,5,0.2);
+    z-index:0;
+}
+#header .center {
+    position:relative;
+    z-index:1;
+    color:white;
+}
+#header .bottom {
+    color:white;
+}
+#header .center .slogan {
+    font-size:26px;
+    text-transform:uppercase;
+}
+#header .banner h1 {
+    position: relative;
+    font-family: 'Lora', serif;
+    font-size:100px;
+    color:white;
+    text-transform:uppercase;
+    font-weight:normal;
+    display:inline-block;
+    /* background:#ed0121; */
+    padding:0px 18px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    top: 16px;
+}
+
+#header .subtitle h4 {
+    display:inline-block;
+    background:white;
+    color:#ed0121;
+    font-size:38px;
+    padding:0px 15px;
+}
+#header .bottom {
+    text-align:center;
+    width:100%;
+    position:absolute;
+    bottom:30px;
+}
+#header .bottom a {
+    font-size:36px;
+    color:whitesmoke;
+    position:relative;
+    top:-5px;
+}
+.navbar-nav>li:nth-child(4) {
+    margin-right: 150px;
+}
+
+h1 span {
+    font-size: 65px;
+    position: relative;
+    top: -15px;
+}
+.container.services {
+    margin-top: 14px;
+}
+h1.title-page{
+    font-size: 27px;
+    text-transform: uppercase;
+}
+/* ==========================================================================
+    03. Navigation 
+========================================================================== */
+#menu {
+    background: #31436a;
+    margin-bottom:0;
+    padding: 7px 0 14px;
+}
+.navbar-brand h2 {
+    font-family: 'Lora', serif;
+    margin-top:0;
+    font-weight:bold;
+    color:white;
+}
+.navbar-brand {
+    padding-top:8px;
+    padding-bottom:0;
+}
+.navbar-inverse .navbar-nav>li>a {
+    -webkit-transition:all 0.4s;
+    -moz-transition:all 0.4s;
+    -o-transition:all 0.4s;
+    transition:all 0.4s;
+    color:white;
+    font-weight:bold;
+}
+.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>.active>a {
+    /* background:#ed0121; */
+    color:white;
+    text-shadow:none;
+}
+
+
+/* ==========================================================================
+    04. Services 
+========================================================================== */
+h3.subtitle.text-center {
+    font-size: 17px;
+    position: relative;
+    bottom: -16px;
+}
+.service-opt {
+    margin: 50px 0;
+}
+div.highlight-sec{
+    background-color: #31436a;
+    color: white;
+    padding: 51px 0px 70px; 
+} 
+p.highlight-text {
+    font-family: 'Roboto Slab', serif;
+    line-height: 27px;
+    font-size: 15px;
+    font-weight: 100;
+}
+.highlight-service {
+    position: relative;
+    top: 50px;
+    z-index: 99;
+}
+.bottom-service {
+    text-align: center;
+    position: relative;
+    top: 35px;
+    text-transform: uppercase;
+}
+em.size-large-service {
+    font-size: 27px;
+    font-style: normal;
+}
+p.consult-text {
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+p.button-text{
+    font-size: 29px;
+    margin: 8px 14px 1px -50px;
+    border: 2px solid white;
+    padding: 2px 0;
+}
+/* ==========================================================================
+    05. Practice Area
+========================================================================== */
+.fact{
+    top: -35px;
+    box-shadow: inset 0 0 0 1000px rgba(247, 247, 247, 0.83);
+    background-image:url(../img/building.jpg);
+    -webkit-background-size:/*@@prefixmycss->No equivalent*/;
+    -moz-background-size:cover;
+    -o-background-size:/*@@prefixmycss->No equivalent*/;
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    position:relative;
+    height: 550px;
+}
+.container.prac-area {
+    position: relative;
+    bottom: -95px;
+    margin-bottom: 55px;
+}
+h3.subtitle1{
+    font-size: 15px;
+    position: relative;
+    bottom: -16px;
+    text-transform: uppercase;
+}
+h1.title-page1:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: #31aae2;
+    left: 50%;
+    margin-left: -50px;
+    bottom: -10px;
+}
+.area-setion {
+    /* position: relative; */
+    /* top: 160px; */
+    margin-top: 81px;
+}
+h2 .fa {
+    font-size: 51px;
+}
+h2.practice-ar {
+    font-size: 17px;
+    text-transform: uppercase;
+}
+p.practice-arp.text-center {
+    font-size: 13px;
+    letter-spacing: .4px;
+    line-height: 23px;
+}
+h1.title-page1.text-center {
+    font-size: 27px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+    Case
+========================================================================== */
+.container.prac-area.case {
+    /* margin-top: -100px; */
+}
+p.topicon span {
+    font-size: 65px;
+}
+.space {
+    position: relative;
+    top: 30px;
+}
+p.topimg {
+    position: absolute;
+    top: 58%;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 200;
+}
+p.topicon {
+    position: absolute;
+    top: 32%;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#following-cases-test{
+    box-shadow: inset 0 0 0 1000px rgba(247, 247, 247, 0.8);
+    background-image:url(../img/city.jpg);
+    -webkit-background-size:/*@@prefixmycss->No equivalent*/;
+    -moz-background-size:cover;
+    -o-background-size:/*@@prefixmycss->No equivalent*/;
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    height: 491px;
+}
+.case-testimonial{
+    background-color: #38496e;
+    color: white;
+    padding: 60px 20px;
+    /* position: absolute; */
+    /* left: 0; */
+    /* right: 0; */
+    text-align: center;
+    margin: 0 auto;
+    top: 16%;
+}
+.family-img {
+    padding: 40px 0 0 0px;
+}
+/* ==========================================================================
+    Team
+========================================================================== */
+h1.page-title:after {
+    content: "";
+    position: absolute;
+    width: 76px;
+    height: 2px;
+    background: #31aae2;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: 45px;\
+   
+}
+h1.page-title{
+    font-size: 27px;
+    text-transform: uppercase;
+}
+.team-member {
+    margin-top: 70px;
+    padding-bottom: 80px;
+}
+.member-details {
+    background-color: #e1e1e1;
+    padding: 5px 0;
+    margin-top: 17px;
+}
+div#team {
+    background-color: #f1eeed;
+}
+.item p span{
+    font-size: 65px;
+}
+/* ==========================================================================
+   Client Area
+========================================================================== */
+ul.company-names {
+    display: inline-flex;
+}
+li.company {
+    list-style: none;
+    padding:0 30px 0;
+}
+
+/* ==========================================================================
+   FAQ
+========================================================================== */
+.clickable .fa {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    position: relative;
+    top: -19px;
+    cursor: pointer;
+}
+.panel-default > .panel-heading {
+    background-color: #425174;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+#faq {
+    box-shadow: inset 0 0 0 1000px rgba(248, 248, 248, 0.8);
+    background-image:url(../img/faq.jpg);
+    -webkit-background-size:/*@@prefixmycss->No equivalent*/;
+    -moz-background-size:cover;
+    -o-background-size:/*@@prefixmycss->No equivalent*/;
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    position:relative;
+}
+/* ==========================================================================
+    11. Responsive styles 
+========================================================================== */
+
+@media (max-width: 991px){
+    .pricing .pricing-item .pricing-item-details {
+        margin-left: 0;
+    }
+
+    .pricing .pricing-item a img {
+        float: none;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (min-width:768px) {
+    .navbar-nav {
+        float:none !important;
+        width:100%;
+        text-align:center;
+        margin-left:9px;
+    }
+    .navbar-nav>li {
+        display:inline-block;
+        float:none;
+    }
+    #logo {
+        position:absolute;
+        display:block !important;
+        width:110px;
+        left:50%;
+        margin-left: -40px;
+        /* background:black; */
+        -webkit-border-radius:0 0 100% 100%;
+        -moz-border-radius:0 0 100% 100%;
+        border-radius:0 0 100% 100%;
+        padding: 12px;
+    }
+       div#cases {
+        min-height: 900px;
+    }
+}
+
+@media (max-width:767px) {
+    #header .banner h1 {
+        font-size:60px;
+    }
+    #header .subtitle h4 {
+        font-size: 22px;
+    }
+    .social-bar {
+        text-align: left;
+        margin-top: 30px;
+    }
+}
+
+.container.prac-areas.case {
+    position: relative;
+}
+
+.testimonial-carousel{
+    z-index: 9;
+    background: #455579;
+    color: white;
+}
