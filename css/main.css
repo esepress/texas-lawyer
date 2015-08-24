@@ -43,10 +43,20 @@ h1,h3,h3,h4,h5,h6{
 p,a{
     font-family: 'Roboto Slab', serif;
 }
-
+@media (max-width: 331px){
+    p.topimg {
+        position: absolute;
+        top: 65% !important;
+        font-size: 16px !important;
+    }
+}
 /* ==========================================================================
     02. Header 
 ========================================================================== */
+.navbar-inverse .navbar-brand h2{
+    font-size: 27px !important;
+}
+
 #header {
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
     background-image:url(../img/night.jpg);
@@ -133,10 +143,11 @@ button.contact {
     position:relative;
     top:-5px;
 }
-.navbar-nav>li:nth-child(4) {
-    margin-right: 150px;
+@media (min-width: 768px){
+    .navbar-nav>li:nth-child(4) {
+        margin-right: 150px;
+    }
 }
-
 h1 span {
     font-size: 65px;
     position: relative;
@@ -155,7 +166,7 @@ h1.title-page{
 #menu {
     background: #31436a;
     margin-bottom:0;
-    padding: 7px 0 14px;
+    padding: 7px 0 6px;
 }
 .navbar-brand h2 {
     font-family: 'Lora', serif;
@@ -176,10 +187,11 @@ h1.title-page{
     font-weight:bold;
 }
 .navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>.active>a {
-    /* background:#ed0121; */
+    background: rgba(25, 45, 104, 0.44);
     color:white;
     text-shadow:none;
 }
+
 
 
 /* ==========================================================================
@@ -226,7 +238,7 @@ p.consult-text {
 }
 p.button-text{
     font-size: 29px;
-    margin: 8px 14px 1px -50px;
+    /* margin: 8px 14px 1px -50px; */
     border: 2px solid white;
     padding: 2px 0;
 }
@@ -234,7 +246,7 @@ p.button-text{
     05. Practice Area
 ========================================================================== */
 .fact{
-    top: -35px;
+    top: 20px;
     box-shadow: inset 0 0 0 1000px rgba(247, 247, 247, 0.83);
     background-image:url(../img/building.jpg);
     -webkit-background-size:/*@@prefixmycss->No equivalent*/;
@@ -247,9 +259,19 @@ p.button-text{
     position:relative;
     height: 550px;
 }
+@media (max-width: 400px){
+       .fact{
+        height: 900px !important;
+    } 
+}
+@media (min-width:401px) and (max-width: 991px){
+       .fact{
+        height: 750px !important;
+    } 
+}
 .container.prac-area {
     position: relative;
-    bottom: -95px;
+    bottom: -125px;
     margin-bottom: 55px;
 }
 h3.subtitle1{
@@ -269,9 +291,9 @@ h1.title-page1:after {
     bottom: -10px;
 }
 .area-setion {
-    /* position: relative; */
+    position: relative;
     /* top: 160px; */
-    margin-top: 81px;
+    margin-top: 100px;
 }
 h2 .fa {
     font-size: 51px;
@@ -293,15 +315,16 @@ h1.title-page1.text-center {
 /* ==========================================================================
     Case
 ========================================================================== */
-.container.prac-area.case {
-    /* margin-top: -100px; */
+.space-top {
+    position: relative;
+    top: 48px;
 }
 p.topicon span {
     font-size: 65px;
 }
 .space {
-    position: relative;
-    top: 30px;
+    /* position: relative; */
+    /* top: 30px; */
 }
 p.topimg {
     position: absolute;
@@ -342,15 +365,15 @@ p.topicon {
     background-color: #38496e;
     color: white;
     padding: 60px 20px;
-    /* position: absolute; */
-    /* left: 0; */
-    /* right: 0; */
     text-align: center;
     margin: 0 auto;
     top: 16%;
 }
 .family-img {
     padding: 40px 0 0 0px;
+}
+.area-box{
+    margin-bottom: 30px;
 }
 /* ==========================================================================
     Team
@@ -365,6 +388,9 @@ h1.page-title:after {
     margin-left: -40px;
     margin-top: 45px;\
    
+}
+.icon-wrapper img {
+    width: 100%;
 }
 h1.page-title{
     font-size: 27px;
@@ -394,6 +420,9 @@ ul.company-names {
 li.company {
     list-style: none;
     padding:0 30px 0;
+}
+div#client {
+    margin-bottom: 60px;
 }
 
 /* ==========================================================================
@@ -425,9 +454,117 @@ li.company {
     background-repeat:no-repeat;
     position:relative;
 }
+
+
+
+/* ==========================================================================
+    Contact
+========================================================================== */
+#contact{
+    background: #f1eeed;
+}
+.container.contact-member {
+    margin-top: 60px;
+}
+.contact-text {
+    margin-top: 30px;
+}
+
+.contact-bg.col-md-8.col-sm-12 {
+  position: relative;
+  left: -15px;
+}
+
+.contact-bar img {
+  position: relative;
+  left: -15px;
+  /* width: 450px; */
+}
+.contact-bar {
+   /* margin-left: -29px; */ 
+  background-color: white;
+  
+   height: 713px;
+}
+input#name, input#email {
+  margin-bottom: 10px;
+  border-radius: 0px;
+}
+form {
+  margin-top: 20px;
+}
+button#contact-submit {
+  margin-top: 10px;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #000000;
+  border-color: #204d74;
+  transition: .5s;
+}
+.add-text {
+  margin: 14px 0 20px;
+}
+
+.contact-page {
+    background-color: white;
+}
+textarea#message {
+    width: 100%;
+}
+.canvas.contact-page {
+    background-color: white;
+}
+
+/* ==========================================================================
+    Footer
+========================================================================== */
+
+
+footer#footer {
+    background-color: #31436A;
+    color: white;
+}
+.sub-form {
+    margin-top: 26px;
+}
+.sub-form-type{
+    float: left;
+    width: 91%;
+}
+span.ion-checkmark.check-icon {
+    background-color: #5b6b8e;
+    padding: 14px;
+    position: relative;
+    top: 12px;
+    bottom: 0;
+}
+.border-main{
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.31);
+    padding: 6px;
+}
+.social-right {
+    float: right;
+    }
+.social-right span{
+    padding: 0 10px;
+    font-size: 20px;
+    cursor:pointer;
+}
 /* ==========================================================================
     11. Responsive styles 
 ========================================================================== */
+@media (max-width: 335px){
+    p.button-text {
+        font-size: 21px;
+        border: 2px solid white;
+        padding: 2px 0;
+    }
+}
 
 @media (max-width: 991px){
     .pricing .pricing-item .pricing-item-details {
@@ -437,6 +574,9 @@ li.company {
     .pricing .pricing-item a img {
         float: none;
         margin-bottom: 30px;
+    }
+    #following-cases-test {
+       background: none !important;
     }
 
 }
@@ -456,20 +596,24 @@ li.company {
         position:absolute;
         display:block !important;
         width:110px;
-        left:50%;
+        left: 49%;
         margin-left: -40px;
         /* background:black; */
         -webkit-border-radius:0 0 100% 100%;
         -moz-border-radius:0 0 100% 100%;
         border-radius:0 0 100% 100%;
-        padding: 12px;
+        padding: 4px 12px;
     }
        div#cases {
-        min-height: 900px;
+        min-height: 1000px;
     }
 }
 
 @media (max-width:767px) {
+    .sub-form-type {
+        float: left;
+        width: 80% !important;
+    }
     #header .banner h1 {
         font-size:60px;
     }
@@ -479,6 +623,42 @@ li.company {
     .social-bar {
         text-align: left;
         margin-top: 30px;
+    }
+    .carousel-indicators {
+        display: none;
+    }
+    li.company {
+    list-style: none;
+    padding: 0 5px 0 !important;
+}
+}
+
+@media (max-width: 1200px){
+    .caption-text.col-md-8 {
+     width: 100% !important; 
+    text-align: left;
+    position: relative;
+    top: -30px !important;
+}
+}
+@media (max-width: 375px){
+    div#cases {
+        height: 2000px;
+    }
+}
+@media (min-width: 376px) and (max-width: 575px){
+    div#cases {
+        height: 2500px;
+    }
+}
+@media (min-width: 576px) and (max-width: 675px){
+    div#cases {
+        height: 3600px;
+    }
+}
+@media (min-width: 676px) and (max-width: 768px){
+    div#cases {
+        height: 4000px;
     }
 }
 
@@ -490,4 +670,48 @@ li.company {
     z-index: 9;
     background: #455579;
     color: white;
+}
+ol.carousel-indicators.indicators-2 {
+    float: right !important;
+    position: relative;
+    display: list-item;
+    top: 112px;
+}
+.faq-testimonial {
+    top: 21px;
+    position: relative;
+}
+ol.carousel-indicators.indicators-3 {
+    bottom: 20px !important;
+}
+.indicators-2 li {
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: inherit;
+}
+img.left-img.col-md-4 {
+    width: 250px;
+    padding-bottom: 40px;
+}
+.faq-testimonial-carousel {
+    position: relative;
+    top: -71px;
+}
+.caption-text.col-md-8 {
+    width: 60%;
+    text-align: left;
+    position: relative;
+    top: 25px;
+}
+html{
+    overflow-x: hidden;
+}
+
+.btn-main{
+    background: #31436A !important;
 }
